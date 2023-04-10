@@ -23,7 +23,7 @@ public class User implements UserDetails {
 	private String email;
 	
 	@Column(nullable = false, length = 64)
-	@Length(min = 5, max = 64)
+	@Length(min = 4, max = 64)
 	private String password;
 
 	@ManyToMany

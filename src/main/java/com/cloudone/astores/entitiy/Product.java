@@ -22,16 +22,16 @@ public class Product {
     @Column(nullable = false, length = 15)
     private String category;
 
-    @Column(nullable = false)
-    private String img;
+    @Column(nullable = false, length = 15)
+    private String description;
 
     @Column(nullable = false)
     private Double price;
 
-    public Product(String name, String category, String img, Double price) {
+    public Product(String name, String category, String desc, Double price) {
         this.name = name;
         this.category = category;
-        this.img = img;
+        this.description = desc;
         this.price = price;
     }
 

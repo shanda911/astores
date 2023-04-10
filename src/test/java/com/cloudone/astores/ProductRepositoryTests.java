@@ -21,11 +21,13 @@ public class ProductRepositoryTests {
 	
 	@Test
 	public void testCreateProducts() {
-		Product laptopH = new Product("HP-10","Laptop","Sample",10.22);
-		Product laptopD = new Product("DELL-18","Laptop","Sample",82.55);
-		repo.saveAll(List.of(laptopH, laptopD));
+		Product laptopH = new Product("Air Filter","Filter","Performance",10.99);
+		Product laptopD = new Product("Engine Oil","Performence","Oil",82.55);
+		Product laptopA = new Product("Brakes Pad","Braking","Utility",50.88);
+		Product laptopC = new Product("Oil Filter","Filter","Oil",12.99);
+		repo.saveAll(List.of(laptopH, laptopD, laptopA, laptopC));
 		
 		long count = repo.count();
-		assertEquals(2, count);
+		assertEquals(4, count);
 	}
 }
